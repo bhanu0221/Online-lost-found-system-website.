@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found</title>
+    <link rel="stylesheet" href="interface.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Welcome to Online Lost & Found Inventory System.</div>
+        <div class="auth-buttons">
+            <button id="loginBtn" class="btn login">Login</button>
+            <button id="registerBtn" class="btn register">Register</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Find Lost Items Easily</h1>
+            <p>Report lost or found items and get matched with rightful owners.</p>
+            <button id="getStartedBtn" class="btn primary">Get Started</button>
+
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="images/Register_logo.png" alt="Register">
+                    <h3>Register</h3>
+                    <p>Create an account to start reporting lost and found items.</p>
+                </div>
+                <div class="step">
+                    <img src="images/Login_icon.png" alt="Login">
+                    <h3>Login</h3>
+                    <p>Access your account and manage reports.</p>
+                </div>
+                <div class="step">
+                    <img src="images/Report_Lost.png" alt="Report Lost Item">
+                    <h3>Report Lost Item</h3>
+                    <p>Submit details of the lost item to the database.</p>
+                </div>
+                <div class="step">
+                    <img src="images/Report_Found.png" alt="Report Found Item">
+                    <h3>Report Found Item</h3>
+                    <p>Provide details of a found item to help locate its owner.</p>
+                </div>
+                <div class="step">
+                    <img src="images/Match_Recover.png" alt="Match & Recover">
+                    <h3>Match & Recover</h3>
+                    <p>Our system helps you find matches and reclaim your items.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lost & Found System. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("registerBtn").addEventListener("click", function () {
+            window.location.href = "signup.html";
+        });
+        
+        document.getElementById("getStartedBtn").addEventListener("click", function () {
+        window.location.href = "signup.html"; // Change the URL as needed
+        });
+    </script>
+
+</body>
+
+</html>

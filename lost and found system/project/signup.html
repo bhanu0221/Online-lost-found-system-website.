@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Create Your Account</h2>
+    <p class="form-desc">Join us today! It's quick and easy.</p>
+
+    <div class="form">
+      <!-- Full Name -->
+      <div class="input-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" placeholder="Your full name" autocomplete="name" required />
+      </div>
+
+      <!-- Username -->
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Choose a username" required autocomplete="username" />
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required autocomplete="email" />
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a password" required autocomplete="new-password" />
+        <small>Password must be at least 6 characters</small>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="input-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Re-enter password" required autocomplete="new-password" />
+      </div>
+
+      <!-- Error Messages -->
+      <p id="error-message" class="error"></p>
+      <p id="account-exists-message" class="error hidden" style="display: none;">
+        This email is already registered. <a href="index.html">Log in here</a>.
+      </p>
+
+      <!-- Submit Button -->
+      <button id="submit-btn" onclick="signUp()">Sign Up</button>
+    </div>
+
+    <p class="switch-form">Already have an account? <a href="index.html">Login here</a></p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

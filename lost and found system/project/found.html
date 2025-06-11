@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Found Item</title>
+  <link rel="stylesheet" href="found.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAsHXV79dwe-KFmEtU9G8_QMjC9eq_zDzY",
+      authDomain: "lost-and-found-system-fc07.firebaseapp.com",
+      projectId: "lost-and-found-system-fc07",
+      storageBucket: "lost-and-found-system-fc07.appspot.com",
+      messagingSenderId: "38915289446",
+      appId: "1:38915289446:web:7b5248b3cdd722d66218a7"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (!user) {
+        alert("Please log in to report found items");
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h2><i class="fas fa-map-marker-alt"></i> Report a Found Item</h2>
+
+    <form id="foundItemForm">
+      <!-- Item Information -->
+      <div class="form-section">
+        <h3><i class="fas fa-info-circle"></i> Item Details</h3>
+        
+        <label for="itemName">Item Name</label>
+        <input type="text" id="itemName" name="itemName" required>
+
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="">Select Category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Wallet">Wallet</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Keys">Keys</option>
+          <option value="Documents">Documents</option>
+          <option value="Jewelry">Jewelry</option>
+          <option value="Others">Others</option>
+        </select>
+
+        <label for="dateFound">Date Found</label>
+        <input type="date" id="dateFound" name="dateFound" required>
+
+        <label for="itemDescription">Description</label>
+        <textarea id="itemDescription" name="itemDescription" rows="4" required></textarea>
+
+        <label for="itemImage">Upload Image (Max 5MB)</label>
+        <input type="file" id="itemImage" name="itemImage" accept="image/*" required>
+        <img id="preview" alt="Image Preview" />
+      </div>
+
+      <!-- Location Section -->
+      <div class="form-section">
+        <h3><i class="fas fa-map-marked-alt"></i> Location Details</h3>
+        
+        <label for="locationName">Location Description</label>
+        <div class="location-search">
+          <input type="text" id="locationName" name="locationName" placeholder="Enter location name" required>
+          <button type="button" id="searchLocation" class="icon-button">
+            <i class="fas fa-search"></i> Search
+          </button>
+          <button type="button" id="currentLocation" class="icon-button">
+            <i class="fas fa-location-arrow"></i> Current
+          </button>
+        </div>
+
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
+
+        <label>Pinpoint Location on Map</label>
+        <div id="map"></div>
+        <p class="map-help">Click on the map to mark the exact location</p>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="form-section">
+        <h3><i class="fas fa-user"></i> Your Contact Information</h3>
+        
+        <label for="finderName">Your Name</label>
+        <input type="text" id="finderName" name="finderName" required>
+
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. +91-9876543210" required>
+
+        <label for="altPhoneNumber">Alternate Phone Number</label>
+        <input type="tel" id="altPhoneNumber" name="altPhoneNumber" placeholder="e.g. +91-9876543210">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email">
+
+        <label for="address">Your Address</label>
+        <textarea id="address" name="address" rows="2" placeholder="e.g. 123 Gandhi Road, Dehradun"></textarea>
+      </div>
+
+      <button type="submit" id="submitBtn">
+        <span id="submitText">Submit Report</span>
+        <span id="submitSpinner" style="display:none;">
+          <i class="fas fa-spinner fa-spin"></i> Processing...
+        </span>
+      </button>
+    </form>
+  </div>
+
+  <!-- Status Message -->
+  <div id="statusMessage" class="status-message" style="display: none;"></div>
+
+  <!-- Required JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="found.js"></script>
+</body>
+
+</html>

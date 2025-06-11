@@ -1,0 +1,57 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url("images/feedback.jpg") no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 30;
+        }
+
+        .container {
+            width: 20%;
+            margin: 20px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.244); 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.204);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #090909;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 106%;
+            padding: 10px;
+            background: #007bff;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }

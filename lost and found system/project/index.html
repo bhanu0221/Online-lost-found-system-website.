@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin-allow-popups">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <form class="form" onsubmit="event.preventDefault(); Login();">
+      <!-- Logo and Welcome Message -->
+      <div class="logo-container">
+        <img src="images/logo.png" alt="DBS Logo" width="70" />
+        <h1 class="welcome-text">Welcome to the Lost & Found Portal-Sign In to Reunite!</h1>
+      </div>
+
+      <!-- Email -->
+      <div class="email">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Write your email" autocomplete="email" required />
+      </div>
+
+      <!-- Password -->
+      <div class="pass">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password" autocomplete="current-password"
+          required />
+      </div>
+
+      <!-- Login button -->
+      <button type="submit" id="submit-btn">Log in</button>
+
+      <!-- Sign Up option -->
+      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+
+      <!-- Google Login Button (Styled) -->
+      <div class="auth-buttons">
+        <button type="button" id="login">
+          <img src="images/google.png" alt="Google Logo" class="google-icon">
+          Login with Google
+        </button>
+
+        <button type="button" id="logout">Logout</button>
+      </div>
+
+
+
+      <!-- Error message display -->
+      <div id="error-message" class="error-message"></div>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    window.history.forward();
+    function noBack() {
+      window.history.forward();
+    }
+  </script>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
