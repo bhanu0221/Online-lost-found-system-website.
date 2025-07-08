@@ -48,4 +48,7 @@ Designed database schema and Flask routing logic
 Assisted in UI design and JavaScript functionalities and Ai image generation.
 Contributed to styling, form validation, and responsiveness
 Helped with testing, deployment support 
-and managing Database. 
+and managing Database
+helped in suggestions ideas to improve 
+website to make it user friendly and 
+interactive. 
