@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Firebase configuration
     const firebaseConfig = {
-      apiKey: "AIzaSyAsHXV79dwe-KFmEtU9G8_QMjC9eq_zDzY",
+      apiKey: "",// I have removed my API key
       authDomain: "lost-and-found-system-fc07.firebaseapp.com",
       projectId: "lost-and-found-system-fc07",
       storageBucket: "lost-and-found-system-fc07.firebasestorage.app",
@@ -62,4 +62,5 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
 });
