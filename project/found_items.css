@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: url("images/found.png") no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(0px);
+}
+
+/* Main layout: list on left, map on right */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Found items list styles */
+#foundItemsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 2;
+  max-width: 50%;
+}
+
+.found-item {
+  background: #ffffff5c;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.found-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.found-item small {
+  display: block;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Map container */
+#map {
+  height: 450px;
+  width: 48%;
+  border: 2px solid #aeacac83;
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}

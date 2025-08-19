@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+
+  <div class="user-info">
+    <h2>User Profile</h2>
+    <p><strong>Name:</strong> <span id="user-name"></span></p>
+    <p><strong>Email:</strong> <span id="user-email"></span></p>
+    <button id="edit-profile-btn">Edit Profile</button>
+  </div>
+
+  <div id="lost-section">
+    <div class="section-title">Your Reported Lost Items</div>
+    <div id="lost-items"></div>
+  </div>
+
+  <div id="found-section">
+    <div class="section-title">Your Reported Found Items</div>
+    <div id="found-items"></div>
+  </div>
+
+  <!-- Edit Profile Modal -->
+  <div id="edit-profile-modal" style="display: none;">
+    <div id="edit-profile-form">
+      <h3>Edit Profile</h3>
+      <label for="name-input">Name:</label>
+      <input type="text" id="name-input" placeholder="Enter new name" />
+      
+      <button id="save-changes-btn">Save Changes</button>
+      <button id="cancel-btn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

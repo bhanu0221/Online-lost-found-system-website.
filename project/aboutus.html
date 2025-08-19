@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lost & Found</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('images/about.png') no-repeat center center/cover;
+            background-size: cover;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: rgba(0, 123, 255, 0.85);
+            color: white;
+            padding: 30px;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            font-size: 18px;
+            margin: 40px auto;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            color: #333;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .member {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            color: black;
+            width: 280px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        .member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .member img {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #007bff;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+
+        .member img:hover {
+            transform: scale(1.1);
+        }
+
+        .member h3 {
+            font-size: 22px;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .member p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .team h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #007bff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                font-size: 24px;
+                padding: 20px;
+            }
+
+            .about-text {
+                font-size: 16px;
+                padding: 25px;
+            }
+
+            .team {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .member {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">About Us - Online Lost & Found System</div>
+    <div class="about-text">
+        <p>Welcome to our platform, designed to simplify the process of recovering lost items. Our mission is to connect
+            individuals who have lost their belongings with those who have found them, by utilizing cutting-edge
+            technology and innovative features.</p>
+        <p>We understand the distress caused by losing something of value. That's why we’ve built a community-driven
+            network that fosters trust and collaboration. By integrating real-time location tracking, AI-based image
+            recognition, and secure communication tools, we make the lost and found process as efficient as possible for
+            everyone involved.</p>
+        <p>Our vision goes beyond merely offering a service; we aim to build a trusted ecosystem where technology and
+            goodwill combine. Through partnerships with local authorities and integration with social media, we enhance
+            the chances of reuniting lost items with their rightful owners.</p>
+    </div>
+    <h2>Meet Our Team</h2>
+    <div class="team">
+        <div class="member">
+            <img src="images/Anup.png" alt="Anup Shahi">
+            <h3>Anup Shahi</h3>
+            <p>Lead Developer</p>
+            <p>As the lead developer, I oversee the entire project development. My responsibilities include:</p>
+            <ul>
+                <li>Managing the backend with Python and Flask</li>
+                <li>Handling database management with MySQL</li>
+                <li>Ensuring user authentication through Firebase</li>
+                <li>Integrating Map APIs for real-time location tracking</li>
+                <li>Delivering a seamless user interface using HTML, CSS, and JavaScript</li>
+            </ul>
+            <p>This ensures that all aspects of the project work together efficiently, providing a user-friendly and secure platform.</p>
+            
+        </div>
+        <div class="member">
+            <img src="images/Samar.png" alt="Samar Vijay Singh">
+            <h3>Samar Vijay Singh</h3>
+            <p>Frontend Developer</p>
+            <p>Samar is responsible for crafting the user interface and ensuring the platform’s responsiveness across all devices. His key tasks include:</p>
+            <ul>
+                <li>Building an engaging and user-friendly design</li>
+                <li>Ensuring responsiveness on all devices</li>
+                <li>Leveraging HTML, CSS, and JavaScript to create an intuitive and seamless user experience</li>
+            </ul>
+            <p>His efforts contribute to the overall visual appeal and ease of use of the platform, enhancing the user experience across all devices.</p>
+            
+        </div>
+        <div class="member">
+            <img src="images/Nishant.jpg" alt="Nishant Kumar">
+            <h3>Nishant Kumar</h3>
+            <p>Backend Developer</p>
+            <p>Nishant manages the server-side logic and database functionality. His key areas of expertise include:</p>
+            <ul>
+                <li>Developing the server-side logic with Python and Flask</li>
+                <li>Managing the database functionality using MySQL</li>
+                <li>Ensuring platform security with Firebase</li>
+            </ul>
+            <p>His role ensures that the platform runs smoothly, remains secure, and meets the needs of the users effectively, maintaining a reliable and secure environment.</p>
+            
+        </div>
+    </div>
+</body>
+
+</html>

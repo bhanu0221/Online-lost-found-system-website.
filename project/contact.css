@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("images/contact.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Form Container */
+.container {
+    width: 20%;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0); /* Increased visibility */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0); /* Improved shadow effect */
+    border-radius: 8px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #121010;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #0d0d0d;
+}
+
+/* Input & Textarea */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+button {
+    width: 107%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #0056b3;
+}
+
+/* Status Message */
+#statusMessage {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}

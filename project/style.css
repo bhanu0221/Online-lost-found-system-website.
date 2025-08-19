@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: url("images/background.webp") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.form {
+    width: 400px;
+    border-radius: 15px;
+    background: rgba(250, 250, 250, 0.112); /* Semi-transparent background */
+    
+    /* Ensure Safari Compatibility */
+    -webkit-backdrop-filter: blur(1px); /* Safari 9+ */
+    backdrop-filter: blur(1px); /* Standard */
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.11);
+    padding: 10px 15px;
+}
+
+
+
+label {
+    display: block;
+    font-weight: bolder;
+    margin: 5px 0px;
+}
+
+input {
+    width: 100%;
+    padding: 8px 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#submit-btn {
+    border: none;
+    background-color: blueviolet;
+    width: 100%;
+    padding: 10px 8px;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 9px 0px;
+}
+
+p {
+    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+  }
+  
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    background-color: rgba(233, 229, 229, 0.499);
+    border: 1px solid #dddddd09;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.352);
+}
+
+#logout {
+    display: none;
+    margin-top: 10px;
+}
+
+.google-icon {
+    width: 30px;
+    /* Adjust width as needed */
+    margin-right: 8px;
+    /* Adds some spacing between the icon and text */
+    vertical-align: middle;
+    /* Aligns the icon properly with text */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.welcome-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #161414;
+}  
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.form-desc {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.input-group small {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.switch-form {
+  margin-top: 15px;
+}
