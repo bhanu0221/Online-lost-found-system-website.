@@ -38,9 +38,9 @@ Roles & Contributions
 
 [Team Name]:
 
-Anup shahi
-Samar Vijay Singh
-Nishant kumar
+1) Anup shahi
+2) Samar Vijay Singh
+3) Nishant kumar
 
 The frontend-backend integration
 Built user login system with Firebase
