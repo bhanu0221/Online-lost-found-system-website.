@@ -35,15 +35,18 @@ Features
 
 Roles & Contributions
 
-Anup Shahi (Team Lead):
 
-Led the frontend-backend integration
+[Team Name]:
+
+Anup shahi
+Samar Vijay Singh
+Nishant kumar
+
+The frontend-backend integration
 Built user login system with Firebase
 Implemented reporting, profile panel, and map integration
 Designed database schema and Flask routing logic
 
-
-[Team mates Name->Samar Vijay Singh and Nishant kumar]:
 
 Assisted in UI design and JavaScript functionalities and Ai image generation.
 Contributed to styling, form validation, and responsiveness
